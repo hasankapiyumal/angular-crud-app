@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {ExpensesService} from "../../Expenses.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Expense} from "../../Expense";
+import {error} from "@angular/compiler-cli/src/transformers/util";
 
 @Component({
   selector: 'app-update-expense-data',
@@ -28,6 +30,20 @@ export class UpdateExpenseDataComponent {
       })
       console.log(response);
     },error => {
+      console.log(error);
+    })
+  }
+  update(){
+    let data: Expense = {
+      'id':this.expensesDataForm.get('id')?.value!,
+      'title': this.expensesDataForm.get('title')?.value!,
+      'description': this.expensesDataForm.get('description')?.value!,
+      'cost': this.expensesDataForm.get('cost')?.value!,
+    }
+
+    this.service.updateData(data).then(response => {
+      console.log(response);
+    }).catch(error=>{
       console.log(error);
     })
   }
