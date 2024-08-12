@@ -1,27 +1,30 @@
-<form [formGroup]="expensesDataForm" >
-  <div class="container">
-    <div class="row">
-      <div class="col-3">
+<form [formGroup]="expensesDataForm">
+  <div class="container py-4">
+    <div class="row g-3">
+      <div class="col-md-3">
         <div class="form-group">
-          <label for="id">Id</label>
-          <input (keyup.enter)="findData()" type="text" id="id" class="form-control" formControlName="id">
+          <label for="id" class="form-label">ID</label>
+          <input (keyup.enter)="findData()" type="text" id="id" class="form-control" formControlName="id" placeholder="Enter ID">
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-md-3">
         <div class="form-group">
-          <label for="title">Title</label>
-          <input [disabled]="true" type="text" id="title" class="form-control" formControlName="title">
+          <label for="title" class="form-label">Title</label>
+          <input [disabled]="true" type="text" id="title" class="form-control" formControlName="title" placeholder="Title will be auto-filled">
         </div>
       </div>
-      <div class="col-3">
-        <label for="description">Description</label>
-        <input [disabled]="true"  type="text" class="form-control" id="description" formControlName="description">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="description" class="form-label">Description</label>
+          <input [disabled]="true" type="text" class="form-control" id="description" formControlName="description" placeholder="Description will be auto-filled">
+        </div>
       </div>
-      <div class="col-3">
-        <label for="cost">cost</label>
-        <input [disabled]="true"  type="text" id="cost" class="form-control" formControlName="cost">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="cost" class="form-label">Cost</label>
+          <input [disabled]="true" type="text" id="cost" class="form-control" formControlName="cost" placeholder="Cost will be auto-filled">
+        </div>
       </div>
-
     </div>
   </div>
 </form>

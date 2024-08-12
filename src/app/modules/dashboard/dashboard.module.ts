@@ -12,6 +12,9 @@ import { LoanContextComponent } from './components/loan-context/loan-context.com
 import {MatButtonModule} from "@angular/material/button";
 import { NewExpensesDataComponent } from './components/expenses-context/items/new-expenses-data/new-expenses-data.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { FindExpensesDataComponent } from './components/expenses-context/items/find-expenses-data/find-expenses-data/find-expenses-data.component';
+import { UpdateExpenseDataComponent } from './components/expenses-context/items/update-expense-data/update-expense-data.component';
+import { LoadAllExpensesDataComponent } from './components/expenses-context/items/load-all-expenses-data/load-all-expenses-data.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     ExpensesContextComponent,
     SalaryContextComponent,
     LoanContextComponent,
-    NewExpensesDataComponent
+    NewExpensesDataComponent,
+    FindExpensesDataComponent,
+    UpdateExpenseDataComponent,
+    LoadAllExpensesDataComponent
   ],
   imports: [
     CommonModule,

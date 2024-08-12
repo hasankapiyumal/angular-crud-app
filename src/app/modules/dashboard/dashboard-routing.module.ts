@@ -9,13 +9,25 @@ import {SalaryContextComponent} from "./components/salary-context/salary-context
 import {
   NewExpensesDataComponent
 } from "./components/expenses-context/items/new-expenses-data/new-expenses-data.component";
+import {
+  FindExpensesDataComponent
+} from "./components/expenses-context/items/find-expenses-data/find-expenses-data/find-expenses-data.component";
+import {
+  UpdateExpenseDataComponent
+} from "./components/expenses-context/items/update-expense-data/update-expense-data.component";
+import {
+  LoadAllExpensesDataComponent
+} from "./components/expenses-context/items/load-all-expenses-data/load-all-expenses-data.component";
 
 const routes: Routes = [{ path: '', component: DashboardComponent,children:[
     {path:'',redirectTo:'dashboard/process/home',pathMatch:'full'},
     {path:'process',component:DashboardContextComponent,children:[
         {path:'home',component:DefaultComponent},
         {path:'expenses',component:ExpensesContextComponent,children:[
-            {path:'new',component:NewExpensesDataComponent}
+            {path:'new',component:NewExpensesDataComponent},
+            {path:'find',component:FindExpensesDataComponent},
+            {path:'update',component:UpdateExpenseDataComponent},
+            {path:'list',component:LoadAllExpensesDataComponent},
           ]},
         {path:'loan',component:LoanContextComponent},
         {path:'salary',component:SalaryContextComponent},
